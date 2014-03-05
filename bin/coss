@@ -1,0 +1,26 @@
+#!/usr/local/bin/node
+
+var cli = require('commander');
+var generators = require('../lib/generators');
+
+var success = false;
+
+cli
+  .version('0.0.1')
+  .usage('<command> [options]');
+cli
+  .command('outline <source>')
+  .description('Fetch source from URL and present as tree nodes')
+  .action(function(source) {
+    generators.fromUrl(source, cli.css);
+    success = true;
+  });
+cli
+  .option('-f, --file [source]',  'HTML source file')
+  .option('-u, --url [source]',   'HTML source URL')
+  .option('-c, --css [selector]', 'Root CSS selector (defaults to `body`)', 'body')
+  .parse(process.argv);
+
+if(!success) {
+  cli.help();
+}
