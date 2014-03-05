@@ -9,10 +9,14 @@ cli
   .version('0.0.1')
   .usage('<command> [options]');
 cli
-  .command('outline <source>')
-  .description('Fetch source from URL and present as tree nodes')
-  .action(function(source) {
-    generators.fromUrl(source, cli.css);
+  .command('url <url>')
+  .description('Fetch source from URL and present as tree')
+  .action(function(url) {
+    // if(source.match('^https?'))
+    if(!url.match(/^https?/)) {
+      url = 'http://' + url;
+    }
+    generators.fromUrl(url, cli.css);
     success = true;
   });
 cli

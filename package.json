@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "COSS Explorer",
+  "name": "outliner",
   "version": "0.0.1",
-  "description": "COSS Explorer",
+  "description": "Outline and explore document structure and CSS component naming",
   "dependencies": {
     "grunt": "*",
     "spooky": "*",
