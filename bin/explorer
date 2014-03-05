@@ -1,0 +1,20 @@
+#!/usr/local/bin/node
+
+var cli = require('commander');
+var generators = require('../lib/generators');
+
+cli
+  .version('0.0.1')
+  .usage('[options]')
+  .option('-c, --css [selector]', 'Root CSS selector')
+  .option('-f, --file [source]', 'HTML source file')
+  .option('-u, --url [source]', 'HTML source URL')
+  .parse(process.argv);
+
+if(cli.file) {
+  generators.fromFile(cli.file, cli.css);
+} else if(cli.url) {
+  generators.fromUrl(cli.url, cli.css);
+} else {
+  cli.help();
+}
