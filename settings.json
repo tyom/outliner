@@ -1,0 +1,8 @@
+{
+  "syntax": {
+    "component": "{class}",
+    "part": "p-{class}",
+    "modifier": "m-{class}",
+    "state": "s-{class}"
+  }
+}

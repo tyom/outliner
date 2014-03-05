@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "COSS Explorer",
+  "version": "0.0.1",
+  "description": "COSS Explorer",
+  "dependencies": {
+    "grunt": "*",
+    "spooky": "*",
+    "cheerio": "*",
+    "sugar": "*",
+    "dom-walk": "*",
+    "colors": "*",
+    "html": "*",
+    "commander": "~2.1.0",
+    "request": "~2.34.0"
+  }
+}
