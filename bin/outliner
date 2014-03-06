@@ -8,21 +8,22 @@ var success = false;
 cli
   .version('0.0.1')
   .usage('<command> [options]');
+// Commands
 cli
   .command('url <url>')
   .description('Fetch source from URL and present as tree')
   .action(function(url) {
-    // if(source.match('^https?'))
     if(!url.match(/^https?/)) {
       url = 'http://' + url;
     }
-    generators.fromUrl(url, cli.css);
+
+    generators.fromUrl(url, cli);
     success = true;
   });
+// Options
 cli
-  .option('-f, --file [source]',  'HTML source file')
-  .option('-u, --url [source]',   'HTML source URL')
-  .option('-c, --css [selector]', 'Root CSS selector (defaults to `body`)', 'body')
+  .option('-c, --css [selector]', 'Root CSS selector (default: body)', 'body')
+  .option('-o, --output [filename]',  'Save output to a file')
   .parse(process.argv);
 
 if(!success) {
