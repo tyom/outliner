@@ -22,8 +22,9 @@ cli
   });
 // Options
 cli
-  .option('-c, --css [selector]', 'Root CSS selector (default: body)', 'body')
+  .option('-c, --css [selector]', 'Root CSS selector (default: `body`)', 'body')
   .option('-o, --output [filename]',  'Save output to a file')
+  .option('-f, --format [format]',  'Output format for file. `text` or `html` (default: `text`)', 'text')
   .parse(process.argv);
 
 if(!success) {

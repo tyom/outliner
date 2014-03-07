@@ -10,8 +10,9 @@
     "sugar": "*",
     "dom-walk": "*",
     "colors": "*",
-    "html": "*",
+    "html": "0.0.7",
     "commander": "~2.1.0",
-    "request": "~2.34.0"
+    "request": "~2.34.0",
+    "mkdirp": "^0.3.5"
   }
 }

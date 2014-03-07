@@ -1,4 +1,9 @@
 {
+  "outputDir": "out",
+  "template": {
+    "css": "template/style.css",
+    "html": "template/layout.html"
+  },
   "syntax": {
     "component": "{class}",
     "part": "p-{class}",
